@@ -13,7 +13,7 @@ Este proyecto está listo para ejecutarse con un solo comando usando Docker.
 
 ## 📁 Estructura del proyecto
 
-````txt
+```txt
 .
 ├── backend/
 │   ├── src/
@@ -34,44 +34,50 @@ Este proyecto está listo para ejecutarse con un solo comando usando Docker.
 ├── docker-compose.yml
 └── .env                  # Variables globales para PostgreSQL (Docker)
 
+```
 
 ---
 
-# 🚀 Cómo ejecutar la aplicació
+## 🚀 Cómo ejecutar la aplicació
+
 1. Clona este repositorio:
    ```bash
    git clone
-    ```
+   ```
 2. Navega al directorio del proyecto:
-    ```bash
-    cd challengerTCIT
-    ```
+   ```bash
+   cd challengerTCIT
+   ```
 3. Construye y levanta los contenedores Docker:
-    ```bash
-    docker-compose up --build
-    ```
+   ```bash
+   docker-compose up --build
+   ```
 4. Accede a la aplicación frontend en tu navegador:
-    ```
-    http://localhost:5173
-    ```
+   ```
+   http://localhost:5173
+   ```
 5. Accede a Adminer para gestionar la base de datos:
-    ```
-    http://localhost:8080
-    ```
+   ```
+   http://localhost:8080
+   ```
+
 ---
 
-# ⚙️ Configuración de variables de entorno
+## ⚙️ Configuración de variables de entorno
+
 - **Backend:** Configura las variables en `backend/.env.docker`.
 - **Base de datos:** Configura las variables en el archivo `.env` en la raíz del proyecto.
 
 ---
 
-# 🛠️ Tecnologías utilizada
+## 🛠️ Tecnologías utilizada
+
 - **Frontend:** React, Vite, Redux Toolkit
 - **Backend:** Node.js, Express
 - **Base de datos:** PostgreSQL 16
 - **Contenedores:** Docker, Docker Compose
-````
+
+```
 
 ---
 
@@ -110,3 +116,4 @@ Si lo ejecutas sin Docker, asegúrate de que Axios use el backend local, por eje
 // });
 
 Y vuelve a baseURL: "/api" cuando uses Docker.
+```
