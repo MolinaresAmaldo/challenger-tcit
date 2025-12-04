@@ -1,0 +1,66 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16
+    container_name: challenger_tcit_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - challenger_tcit_network
+
+  adminer:
+    image: adminer
+    container_name: challenger_tcit_adminer
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+    networks:
+      - challenger_tcit_network
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: challenger_tcit_backend
+    env_file:
+      - ./backend/.env.docker 
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/app         
+      - /app/node_modules
+    networks:
+      - challenger_tcit_network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    container_name: challenger_tcit_frontend
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - challenger_tcit_network
+
+volumes:
+  postgres_data:
+
+networks:
+  challenger_tcit_network:

@@ -1,0 +1,21 @@
+{
+  "name": "api_challeger",
+  "version": "1.0.0",
+  "description": "API de posts para challenge React + Node",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node --watch src/app.js",
+    "seed": "node src/seeders/post_seeder.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.19.0",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.3"
+  }
+}
