@@ -77,10 +77,6 @@ Este proyecto está listo para ejecutarse con un solo comando usando Docker.
 - **Base de datos:** PostgreSQL 16
 - **Contenedores:** Docker, Docker Compose
 
-```
-
----
-
 ---
 
 🖥️ Ejecutar sin Docker (opcional)
@@ -116,4 +112,7 @@ Si lo ejecutas sin Docker, asegúrate de que Axios use el backend local, por eje
 // });
 
 Y vuelve a baseURL: "/api" cuando uses Docker.
+
+```
+
 ```
