@@ -34,7 +34,10 @@ Este proyecto está listo para ejecutarse con un solo comando usando Docker.
 ├── docker-compose.yml
 └── .env                  # Variables globales para PostgreSQL (Docker)
 
-### ## 🚀 Cómo ejecutar la aplicació
+
+---
+
+# 🚀 Cómo ejecutar la aplicació
 1. Clona este repositorio:
    ```bash
    git clone
@@ -55,17 +58,24 @@ Este proyecto está listo para ejecutarse con un solo comando usando Docker.
     ```
     http://localhost:8080
     ```
+---
 
-## ⚙️ Configuración de variables de entorno
+# ⚙️ Configuración de variables de entorno
 - **Backend:** Configura las variables en `backend/.env.docker`.
 - **Base de datos:** Configura las variables en el archivo `.env` en la raíz del proyecto.
 
-## 🛠️ Tecnologías utilizada
+---
+
+# 🛠️ Tecnologías utilizada
 - **Frontend:** React, Vite, Redux Toolkit
 - **Backend:** Node.js, Express
 - **Base de datos:** PostgreSQL 16
 - **Contenedores:** Docker, Docker Compose
 ````
+
+---
+
+---
 
 🖥️ Ejecutar sin Docker (opcional)
 
